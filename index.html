@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Enable 360 browser WebKit mode -->
+    <meta name="renderer" content="webkit">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<div class="testBox">
+    <ul class="test">
+        <li>hdhh</li>
+        <li>dhjf</li>
+        <li>dhjf</li>
+    </ul>
+</div>
     <div class="container">
         <div class="header">
             <div class="header-title">
@@ -22,19 +33,40 @@
             </div>
         </div>
 
-        <div class="banner">
-            <ul>
-                <li><i class="banner1"></i></li>
-                <li><i></i></li>
-                <li><i></i></li>
-                <li><i></i></li>
+        <div class="testBox">
+            <ul class="test">
+                <li>hdhh</li>
+                <li>dhjf</li>
+                <li>dhjf</li>
             </ul>
+        </div>
+
+        <div class="banner">
+
+            <!--<ul class="bannerGroup">
+                <li><img src="img/banner1.jpg"></li>
+                <li><img src="img/banner2.jpg"></li>
+                <li><img src="img/banner3.jpg"></li>
+                <li><img src="img/banner4.jpg"></li>
+            </ul>-->
+            <!--<div class="bannerPoint">
+                <span>o</span>
+                <span class="active">o</span>
+                <span>o</span>
+                <span>o</span>
+            </div>-->
         </div>
 
         <!--会议报道-->
         <div class="meeting">
             <div class="box-title">
                 <span>会议报道</span>
+            </div>
+            <div class="meeting-content clearfix">
+                <div class="meeting-item">
+                    <div class="meeting-item-img"></div>
+                    <div class="meeting-item-text"></div>
+                </div>
             </div>
         </div>
 
@@ -43,6 +75,11 @@
             <div class="box-title">
                 <span>比赛视频</span>
             </div>
+            <div class="video-content clearfix">
+                <div class="video-item">
+
+                </div>
+            </div>
         </div>
 
         <!--课程视频-->
@@ -50,9 +87,15 @@
             <div class="box-title">
                 <span>课程视频</span>
             </div>
+            <div class="video-content clearfix">
+                <div class="video-item">
+
+                </div>
+            </div>
         </div>
     </div>
 
-
+    <script src="jquery-1.11.2.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
