@@ -2,6 +2,37 @@
     box-sizing: border-box;
     margin: 0;
 }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0 ;
+    padding: 0 ;
+    font-weight: normal ;
+}
+h1, h2, h3{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+body {
+    margin: 0;
+    font-family: 'Microsoft Yahei';
+    color: #333;
+    font-size: 16px;
+}
 a {
     text-decoration: none;
 }
@@ -9,7 +40,7 @@ ul {
     padding: 0;
 }
 ul > li {
-    list-style: none;
+    /*list-style: none;*/
 }
 .clearfix {
     clear: both;
@@ -22,6 +53,12 @@ ul > li {
     width: 1200px;
     margin: 0 auto;
 }
+.footer {
+    background-color: #323137;
+    height: 210px;
+}
+
+/*首页----------------------------------------------*/
 .box-title {
     background-color: #068efb;
     color: #fff;
@@ -31,7 +68,7 @@ ul > li {
     line-height: 40px;
     padding-left: 18px;
 }
-
+/*导航*/
 .header {
     height: 70px;
 }
@@ -55,14 +92,16 @@ ul > li {
 .header-nav > ul > li {
     float: left;
     margin-left: 80px;
+    list-style: none;
 }
 .header-nav > ul > li > a,
 .header-nav > ul > li > a:focus,
 .header-nav > ul > li > a:active {
-    color: #000;
+    color: #333;
     outline: none;
 }
 
+/*轮播图*/
 .banner {
     box-shadow: 0px 10px 10px -8px #999;
     /*height: 562px;*/
@@ -72,20 +111,6 @@ ul > li {
     margin-bottom: 30px;
     position: relative;
     white-space: nowrap;
-}
-
-.testBox {
-    width: 500px;
-    text-align: center;
-    border: solid 1px #000;
-}
-.test {
-    display: inline-table;
-    height: 100%;
-}
-.test > li {
-    float: left;
-    width: 300px;
 }
 .bannerGroup {
     height: 100%;
@@ -100,7 +125,6 @@ ul > li {
     width: 100%;
     height: 100%;
 }
-
 .banner > .bannerPoint {
     position: absolute;
     height: 30px;
@@ -115,7 +139,7 @@ ul > li {
     color: red;
 }
 
-    /*会议报道*/
+/*会议报道*/
 .meeting {
 }
 .meeting-content {
@@ -126,16 +150,34 @@ ul > li {
     width: 580px;
     height: 165px;
     margin: 20px;
-    border: solid 1px #000;
 }
 .meeting-item > .meeting-item-img {
     float: left;
     width: 180px;
     height: 100%;
 }
+.meeting-item > .meeting-item-img > img {
+    height: 100%;
+    width: 100%;
+}
 .meeting-item > .meeting-item-text {
-    float: left;
+    float: right;
     width: calc(100% - 200px);
+    height: 100%;
+}
+.meeting-item > .meeting-item-text > .meting-title {
+    color: #388ed7;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.meeting-item > .meeting-item-text > div > span {
+    color: #666;
+    font-size: 16px;
+    line-height: 46px;
+}
+.meeting-item > .meeting-item-text > div > a {
+    color: #068efb;
 }
 
 /*视频*/
@@ -145,14 +187,136 @@ ul > li {
 .video-item {
     float: left;
     width: 276px;
-    height: 260px;
     margin: 16px;
-    border: solid 1px #000;
 }
-/*比赛视频*/
-.gameVideo {
+.video-item > a > img {
+    display: block;
+    width: 100%;
+    height: 195px;
+}
+.video-item > .video-describe > p:first-child {
+    font-size: 24px;
+    line-height: 49px;
+}
+.video-item > .video-describe > p:nth-child(2) {
+    color: #999;
+    font-size: 16px;
 }
 
-/*课程视频*/
-.courseVideo {
+/*列表页------------------------------------------------------------*/
+/*内容区*/
+.zoneBox {
+    margin: 20px 0;
+}
+/*左侧框*/
+.zoneBox-list {
+    border: solid 1px #dcdcdc;
+    border-radius: 3px;
+    float: left;
+    width: 850px;
+    padding: 20px;
+}
+/*右侧*/
+.zoneBox-overview {
+    border: solid 1px #dcdcdc;
+    border-radius: 3px;
+    float: right;
+    width: 330px;
+    height: 200px;
+}
+
+/*会议专区*/
+.meetingBox-list {
+    border: solid 1px #dcdcdc;
+    border-radius: 3px;
+    float: left;
+    width: 850px;
+    padding: 20px;
+}
+.meetingBox-list > ul.meetingBox-list-box {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.meetingBox-list-box > li {
+    border-bottom: dotted 1px #d6d6d6;
+    line-height: 30px;
+}
+.meetingBox-list-box > li > a {
+    color: #333;
+}
+.meetingBox-list-box > li > a:hover {
+    color: #068efb;
+    text-decoration: underline;
+}
+.meetingBox-list-box > li span:nth-child(2) {
+    color: #999;
+    float: right;
+}
+
+/*会议详情*/
+.meetingDetailTitle {
+    height: 66px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.meetingDetailTitle > .title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.meetingDetailTitle > .time {
+    color: #999;
+    font-size: 14px;
+    text-align: right;
+}
+.meetingDetailContent {
+    padding-top: 20px;
+}
+
+/*视频专区-赛事&&课程学习*/
+.video-list-box {
+
+}
+.video-list-item {
+    float: left;
+    width: 390px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.video-list-item:nth-child(2n+1) {
+    margin-right: 26px;
+}
+.video-list-item-img {
+    float: left;
+    width: 160px;
+    height: 100%;
+}
+.video-list-item-img > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.video-list-item-img > a > img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.video-list-item-text {
+    float: left;
+    width: calc(100% - 160px);
+    padding-left: 15px;
+}
+.video-list-item-text > p:first-child {
+    font-size: 16px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.video-list-item-text > p:nth-child(2) {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.video-list-item-text > p:nth-child(3) {
+    color: #999;
+    font-size: 12px;
 }
