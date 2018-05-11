@@ -31,7 +31,7 @@ var meetingData = {
         var html = '';
         for (var index in list) {
             html += '<li>';
-            html += '<a href="' + Window.pathUrl + 'home/meetingDetail.html?meetingId=' + list[index].meeting_id + '" target="_blank">';
+            html += '<a href="meetingDetail.html?meetingId=' + list[index].meeting_id + '" target="_blank">';
             html += '<span>' + list[index].meeting_title + '</span>';
             html += '<span>' + list[index].meeting_time +'</span>';
             html += '</a>';

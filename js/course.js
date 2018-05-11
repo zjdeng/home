@@ -31,7 +31,7 @@ var matchData = {
         for (var index in list) {
             html += '<div class="video-list-item">';
             html += '<div class="video-list-item-img">';
-            html += '<a href="' + Window.pathUrl + 'home/courseDetail.html?courseId=' + list[index].study_id + '" target="_blank">';
+            html += '<a href="courseDetail.html?courseId=' + list[index].study_id + '" target="_blank">';
             html += '<img src="' + Window.mediaPath + list[index].study_vedio_pic_url + '" alt="ss">';
             html += '</a>';
             html += '</div>';

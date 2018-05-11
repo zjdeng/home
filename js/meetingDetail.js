@@ -23,6 +23,5 @@ var meetingDetailData = {
     }
 };
 $(function () {
-    console.log(meetingId);
     meetingDetailData.init();
 });

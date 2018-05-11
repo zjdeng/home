@@ -26,7 +26,7 @@ var homeData = {
             html += '<p class="meting-title">' + list[i].meeting_title + '</p>';
             html += '<div>';
             html += '<span>' + list[i].meeting_text + '</span>';
-            html += '<a href="' + Window.pathUrl + 'home/meetingDetail.html?meetingId=' + list[i].meeting_id + '">【查看详情】</a>';
+            html += '<a href="meetingDetail.html?meetingId=' + list[i].meeting_id + '">【查看详情】</a>';
             html += '</div>';
             html += '</div>';
             html += '</div>';
@@ -51,7 +51,7 @@ var homeData = {
         var html = '';
         for (var i in list) {
             html += '<div class="video-item">';
-            html += '<a href="' + Window.pathUrl + 'home/matchDetail.html?matchId=' + list[i].match_id + '">';
+            html += '<a href="matchDetail.html?matchId=' + list[i].match_id + '">';
             html += '<img src="' + Window.mediaPath + list[i].match_vedio_pic_url + '" alt="hehe">';
             html += '</a>';
             html += '<div class="video-describe">';
@@ -80,7 +80,7 @@ var homeData = {
         var html = '';
         for (var i in list) {
             html += '<div class="video-item">';
-            html += '<a href="' + Window.pathUrl + 'home/courseDetail.html?courseId=' + list[i].study_id + '">';
+            html += '<a href="courseDetail.html?courseId=' + list[i].study_id + '">';
             html += '<img src="' + Window.mediaPath + list[i].study_vedio_pic_url + '" alt="hehe">';
             html += '</a>';
             html += '<div class="video-describe">';
